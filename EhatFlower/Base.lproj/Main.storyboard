@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UlY-kv-3dR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ton-LO-OzI">
+            <objects>
+                <navigationController id="UlY-kv-3dR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XeL-Bh-Ul3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.13210916519999999" green="0.33037906890000002" blue="0.35392656919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="12u-5H-itf" kind="relationship" relationship="rootViewController" id="uL6-p6-Qub"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nd5-yc-POj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ffq-2i-EcT">
+            <objects>
+                <viewController id="12u-5H-itf" customClass="ViewController" customModule="EhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EV3-7U-eRY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGz-AH-SiE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OGz-AH-SiE" secondAttribute="height" multiplier="1:1" id="J0e-eH-kqg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-u3-DkJ">
+                                <rect key="frame" x="20" y="522" width="374" height="320"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="al7-t4-fgi"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="OGz-AH-SiE" firstAttribute="leading" secondItem="al7-t4-fgi" secondAttribute="leading" id="3so-qc-7Sn"/>
+                            <constraint firstItem="kQd-u3-DkJ" firstAttribute="leading" secondItem="al7-t4-fgi" secondAttribute="leading" constant="20" id="9jg-4E-vWj"/>
+                            <constraint firstItem="al7-t4-fgi" firstAttribute="bottom" secondItem="kQd-u3-DkJ" secondAttribute="bottom" constant="20" id="NpQ-4L-gkb"/>
+                            <constraint firstItem="OGz-AH-SiE" firstAttribute="trailing" secondItem="al7-t4-fgi" secondAttribute="trailing" id="RVg-uA-hkf"/>
+                            <constraint firstItem="kQd-u3-DkJ" firstAttribute="top" secondItem="OGz-AH-SiE" secondAttribute="bottom" constant="20" id="dG5-77-Tj2"/>
+                            <constraint firstItem="OGz-AH-SiE" firstAttribute="top" secondItem="al7-t4-fgi" secondAttribute="top" id="i40-Fi-Ees"/>
+                            <constraint firstItem="al7-t4-fgi" firstAttribute="trailing" secondItem="kQd-u3-DkJ" secondAttribute="trailing" constant="20" id="jgU-fJ-aKi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oct-6x-lY2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="BiS-FL-5In">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="12u-5H-itf" id="2BP-4L-Ueh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="OGz-AH-SiE" id="9Wq-dj-udl"/>
+                        <outlet property="label" destination="kQd-u3-DkJ" id="YzB-BC-wL3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JV-1u-VQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.6376811594205" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
